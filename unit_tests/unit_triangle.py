@@ -10,8 +10,7 @@ class TriangleAreaTestCases(unittest.TestCase):
         self.assertEqual(area(10, 15), 10 * 15 / 2)
 
     def test_triangle_int_second(self):
-    	self.assertEqual(perimeter(30000, 40000, 50000), 30000 + 40000 + 50000)
-
+        self.assertEqual(area(12345, 67890), 12345 * 67890 / 2)
 
     def test_triangle_string_first(self):
         with self.assertRaises(TypeError):
@@ -46,8 +45,8 @@ class TrianglePerimeterTestCases(unittest.TestCase):
         self.assertEqual(perimeter(15, 20, 25), 15 + 20 + 25)
 
     def test_triangle_int_second(self):
-    self.assertEqual(perimeter(30000, 40000, 50000), 30000 + 40000 + 50000)
-
+        # Используем корректные стороны треугольника
+        self.assertEqual(perimeter(30000, 40000, 50000), 30000 + 40000 + 50000)
 
     def test_triangle_string_first(self):
         with self.assertRaises(TypeError):
