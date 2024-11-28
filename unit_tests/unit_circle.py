@@ -19,6 +19,9 @@ class CircleAreaTestCases(unittest.TestCase):
     def test_circle_string_second(self):
         with self.assertRaises(TypeError):
             area("XYZ1")
+    def test_circle_string_third(self):
+        with self.assertRaises(TypeError):
+            area("WER2")
 
     def test_circle_bool_first(self):
         with self.assertRaises(TypeError):
