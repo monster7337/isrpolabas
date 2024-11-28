@@ -46,7 +46,8 @@ class TrianglePerimeterTestCases(unittest.TestCase):
         self.assertEqual(perimeter(15, 20, 25), 15 + 20 + 25)
 
     def test_triangle_int_second(self):
-        self.assertEqual(perimeter(12345, 67890, 98765), 12345 + 67890 + 98765)
+    self.assertEqual(perimeter(30000, 40000, 50000), 30000 + 40000 + 50000)
+
 
     def test_triangle_string_first(self):
         with self.assertRaises(TypeError):
