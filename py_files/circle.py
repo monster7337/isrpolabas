@@ -1,6 +1,7 @@
 import math
 
 def area(r):
+	
     """
     Вычисляет площадь круга.
 
@@ -20,7 +21,9 @@ def area(r):
         raise TypeError("Радиус должен быть числом (int или float).")
     if r <= 0:  # Проверка на отрицательное значение или ноль
         raise ValueError("Радиус должен быть больше нуля.")
+print("ITMO ISRPO")
     return math.pi * r * r
+
 
 
 def perimeter(r):
