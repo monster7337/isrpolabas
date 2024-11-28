@@ -1,29 +1,46 @@
-import math
-
-
 def area(a, b):
     """
-    Возвращает площадь прямоугольника.
+    Вычисляет площадь прямоугольника.
 
     Параметры:
-    a (int): Длина прямоугольника.
-    b (int): Ширина прямоугольника.
+    a (int или float): Длина прямоугольника.
+    b (int или float): Ширина прямоугольника.
 
     Возвращаемое значение:
-    (a * b) * 2: искомая площадь
+    float: Площадь прямоугольника.
+
+    Исключения:
+    TypeError: Если a или b не числа.
+    ValueError: Если a или b <= 0.
     """
-    return (a * b) * 2
+    if isinstance(a, bool) or isinstance(b, bool):
+        raise TypeError("Длина и ширина не могут быть булевыми значениями.")
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Длина и ширина должны быть числами.")
+    if a <= 0 or b <= 0:
+        raise ValueError("Длина и ширина должны быть больше нуля.")
+    return a * b
 
 
 def perimeter(a, b):
     """
-    Возвращает периметр прямоугольника.
+    Вычисляет периметр прямоугольника.
 
     Параметры:
-    a (int): Длина прямоугольника.
-    b (int): Ширина прямоугольника.
+    a (int или float): Длина прямоугольника.
+    b (int или float): Ширина прямоугольника.
 
     Возвращаемое значение:
-    a + b: искомый периметр
+    float: Периметр прямоугольника.
+
+    Исключения:
+    TypeError: Если a или b не числа.
+    ValueError: Если a или b <= 0.
     """
-    return a + b
+    if isinstance(a, bool) or isinstance(b, bool):
+        raise TypeError("Длина и ширина не могут быть булевыми значениями.")
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Длина и ширина должны быть числами.")
+    if a <= 0 or b <= 0:
+        raise ValueError("Длина и ширина должны быть больше нуля.")
+    return 2 * (a + b)
