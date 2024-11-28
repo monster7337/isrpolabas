@@ -11,13 +11,13 @@ def area(r):
         float: Площадь круга.
 
     Исключения:
-        TypeError: Если радиус не является числом (int или float).
+        TypeError: Если радиус не является числом (int или float) или является булевым.
         ValueError: Если радиус отрицательный или равен нулю.
     """
-    if isinstance(r, bool):  # Проверка на булевые значения
+    if isinstance(r, bool):  # Явная проверка на булевый тип
         raise TypeError("Радиус не может быть булевым значением.")
-    if not isinstance(r, (int, float)):  # Проверка на тип
-        raise TypeError("Радиус должен быть положительным числом (int или float).")
+    if not isinstance(r, (int, float)):  # Проверка на числовой тип
+        raise TypeError("Радиус должен быть числом (int или float).")
     if r <= 0:  # Проверка на отрицательное значение или ноль
         raise ValueError("Радиус должен быть больше нуля.")
     return math.pi * r * r
@@ -25,7 +25,7 @@ def area(r):
 
 def perimeter(r):
     """
-    Вычисляет длину окружности
+    Вычисляет длину окружности.
 
     Параметры:
         r (int или float): Радиус круга.
@@ -34,13 +34,13 @@ def perimeter(r):
         float: Длина окружности.
 
     Исключения:
-        TypeError: Если радиус не является числом (int или float).
+        TypeError: Если радиус не является числом (int или float) или является булевым.
         ValueError: Если радиус отрицательный или равен нулю.
     """
-    if isinstance(r, bool):  # Проверка на булевые значения
+    if isinstance(r, bool):  # Явная проверка на булевый тип
         raise TypeError("Радиус не может быть булевым значением.")
-    if not isinstance(r, (int, float)):  # Проверка на тип
-        raise TypeError("Радиус должен быть положительным числом (int или float).")
+    if not isinstance(r, (int, float)):  # Проверка на числовой тип
+        raise TypeError("Радиус должен быть числом (int или float).")
     if r <= 0:  # Проверка на отрицательное значение или ноль
         raise ValueError("Радиус должен быть больше нуля.")
     return 2 * math.pi * r
