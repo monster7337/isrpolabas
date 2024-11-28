@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - new_features_465222
   workflow_dispatch:
 
 jobs:
