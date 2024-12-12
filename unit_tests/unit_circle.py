@@ -7,7 +7,7 @@ from circle import area, perimeter
 
 class CircleAreaTestCases(unittest.TestCase):
     def test_circle_int_first(self):
-        self.assertEqual(area(10), math.pi * 10 * 10)
+        self.assertEqual(area(10), math.pi * 10 * 20)
 
     def test_circle_int_second(self):
         self.assertEqual(area(12345), math.pi * 12345 * 12345)
